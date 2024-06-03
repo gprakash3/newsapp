@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  // Link
 } from "react-router-dom"
 
 import React, { Component } from 'react'
@@ -25,16 +24,7 @@ export default class App extends Component {
         <Routes>
           {/* we will give component which we want to send if /general endpoint hit */}
           {/* if we do not give special key then while clicking the links it will hit the endpoint but it will not remount(page will not reload) */}
-        
-        {/* <Route exact path='/'><News pageSize= {5} apikey={this.apikey} key="general" category="general" country="in"/></Route>
-        <Route exact path='/health'><News pageSize= {5} apikey={this.apikey} key="health" category="health" country="in"/></Route>
-        <Route exact path='/entertainment'><News pageSize= {5} apikey={this.apikey} key="entertainment" category="entertainment" country="in"/></Route>
-        <Route exact path='/science'><News pageSize= {5} apikey={this.apikey} key="science" category="science" country="in"/></Route>
-        <Route exact path='/technology'><News pageSize= {5} apikey={this.apikey} key="technology" category="technology" country="in"/></Route>
-        <Route exact path='/sport'><News pageSize= {5} apikey={this.apikey} key="sport" category="sport" country="in"/></Route>
-        <Route exact path='/business'><News pageSize= {5} apikey={this.apikey} key="business" category="business" country="in"/></Route> */}
 
-        {/* above syntaxs not working */}
         <Route exact path='/' element={<News pageSize= {5} apikey={this.apikey} key="general" category="general" country="in"/>}  />
         <Route exact path='/health' element={<News pageSize= {5} apikey={this.apikey} key="health" category="health" country="in"/>}  />
         <Route exact path='/entertainment' element={<News pageSize= {5} apikey={this.apikey} key="entertainment" category="entertainment" country="in"/>}  />
@@ -51,5 +41,3 @@ export default class App extends Component {
     )
   }
 }
-
-// export default App;

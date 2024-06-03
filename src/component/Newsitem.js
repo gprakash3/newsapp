@@ -1,16 +1,14 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Newsitem extends Component {
+const Newsitem =(props) =>  {
   
-  render() {
     //used when we do not want to change 
     //here we do not want to make tile and description state
     //we make state when we have to change its value repeatedly whithout loading page
     //we cannot change props.   Props are read only
-   let {title,description,url,imgsrc,author,date} =  this.props;
+   let {title,description,url,imgsrc,author,date} = props;
    
-  //  console.log(date);
     return (
       <>
        
@@ -26,28 +24,9 @@ export class Newsitem extends Component {
         </div>
       </>
     )
-  }
+  
 }
 
 export default Newsitem
 
-// export default function Newsitem(props) {
-//   let title=props.title;
-//   let description = props.description;
-//   let imgsrc=props.imgsrc;
-//   let url=props.url;
-//   return (
-//     <>
-//     {/* style={width: "18rem"} */}
-//     <div className="card" style={{width: "18rem"}}>
-//   <img src={imgsrc} className="card-img-top" alt="..."/>
-//   <div className="card-body">
-//     <h5 className="card-title">{title}</h5>
-//     <p className="card-text">{description}</p>
-//     <a href={url} className="btn btn-primary">Read More</a>
-//   </div>
-// </div>
-//     </>
-//   )
-// }
 
